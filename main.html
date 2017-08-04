@@ -1,0 +1,23 @@
+<html>
+<head>
+<script src="jquery-2.2.0.min.js"></script> 
+<meta http-equiv="Conect-Type" content="text/html;charset=utf-8"/>
+</head>
+<body>
+
+		<textarea id="1" cols="30" rows="10" name='slovo' ></textarea>
+		<input type="button" value='Х񦣥򳦧 name='translate' onclick='tr();'>
+		<textarea id='2' cols='30' rows='10'></textarea>"
+		<div id='2'></div>
+							
+</body>
+<script type="text/javascript">
+
+function tr(){
+text1= $('textarea[name=slovo]').val();
+	$.post("main.php",{text:text1},function (str){
+$('#2').html(str);
+});
+}
+</script>
+</html>			
